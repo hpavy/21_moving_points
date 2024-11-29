@@ -88,7 +88,7 @@ def train(
             goal_border = torch.tensor([-mean_std['u_mean']/mean_std['u_std'], -mean_std['v_mean']/mean_std['v_std']], dtype=torch.float32).expand(pred_border.shape[0], 2).to(device)
             loss_border_cylinder = loss(pred_border[:, :2], goal_border)  # (MSE)
             
-            loss_totale = 4/10 * loss_data + 4/10 * loss_pde + 1/10 * loss_border_cylinder
+            loss_totale = 5/10 * loss_data + 5/10 * loss_pde  #+ 1/10 * loss_border_cylinder
 
             # Backpropagation
             loss_totale.backward(retain_graph=True)
@@ -134,7 +134,7 @@ def train(
 
 
         # loss totale
-        loss_test = 4/10 * loss_test_data + 4/10 * loss_test_pde + 1/10 * loss_test_border
+        loss_test = 5/10 * loss_test_data + 5/10 * loss_test_pde  #+ 1/10 * loss_test_border
         scheduler.step()
         with torch.no_grad():
             test_loss["total"].append(loss_test.item())

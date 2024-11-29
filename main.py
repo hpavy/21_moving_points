@@ -6,7 +6,7 @@ print(device)
 
 ############# VARIABLES ################
 
-folder_result_name = "1_first_try"  # name of the result folder
+folder_result_name = "2_model_1_case_2"  # name of the result folder
 
 # Uniquement si nouveau modèle
 
@@ -25,10 +25,10 @@ hyper_param_init = {
     "n_pde_test": 5000,
     "n_data_test": 5000,
     "nb_points_axes": 12,  # le nombre de points pris par axe par pas de temps
-    "x_min": -0.05,
+    "x_min": -0.1,
     "x_max": 0.2,
-    "y_min": -0.06,
-    "y_max": 0.06,
+    "y_min": -0.1,
+    "y_max": 0.1,
     "t_min": 6.5,
     "t_max": 8,
     "transfert_learning": "None",
@@ -36,7 +36,7 @@ hyper_param_init = {
 }
 
 param_adim = {
-    'V': 2.,
+    'V': 1.,
     'L': 0.025,
     'rho': 1.2
 }
