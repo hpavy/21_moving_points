@@ -28,7 +28,7 @@ def charge_data(hyper_param, param_adim):
     """
     # La data
     # On adimensionne la data
-    df = pd.read_csv("data_john_moving_1_case_2.csv")
+    df = pd.read_csv("data_john_3_case_1.csv")
     df_modified = df[
         (df["Points:0"] >= hyper_param["x_min"])
         & (df["Points:0"] <= hyper_param["x_max"])

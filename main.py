@@ -6,7 +6,7 @@ print(device)
 
 ############# VARIABLES ################
 
-folder_result_name = "2_model_1_case_2"  # name of the result folder
+folder_result_name = "5_model_3_case_1"  # name of the result folder
 
 # Uniquement si nouveau modèle
 
